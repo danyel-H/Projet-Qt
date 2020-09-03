@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ajout_materiel</class>
+ <widget class="QMainWindow" name="ajout_materiel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>432</width>
+    <height>348</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>391</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="2" column="0" colspan="2">
+      <widget class="QLineEdit" name="nomEdit"/>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLabel" name="marqueLbl">
+       <property name="text">
+        <string>Marque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QLineEdit" name="marqueEdit"/>
+     </item>
+     <item row="7" column="0" colspan="2">
+      <widget class="QLabel" name="nbLbl">
+       <property name="text">
+        <string>Nombre</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="2">
+      <widget class="QPushButton" name="ajout_bout">
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QSpinBox" name="nbSpin"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="nomLbl">
+       <property name="text">
+        <string>Nom du produit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="2">
+      <widget class="QComboBox" name="selectClub"/>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QLabel" name="Clublbl">
+       <property name="text">
+        <string>Club</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>432</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

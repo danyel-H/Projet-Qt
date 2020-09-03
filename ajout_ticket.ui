@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ajout_ticket</class>
+ <widget class="QWidget" name="ajout_ticket">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>339</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="Indication">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>20</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ajouter un nouveau ticket</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>551</width>
+     <height>285</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="2" column="0">
+     <widget class="QLabel" name="typeLbl">
+      <property name="text">
+       <string>Type de ticket</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="selectType"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="urgenceLbl">
+      <property name="text">
+       <string>Niveau d'urgence</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QComboBox" name="selectUrgence"/>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="descrLbl">
+      <property name="text">
+       <string>Description</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QPlainTextEdit" name="editDescr"/>
+    </item>
+    <item row="9" column="0">
+     <spacer name="petit_espace">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="10" column="0" colspan="2">
+     <widget class="QPushButton" name="valider_bout">
+      <property name="text">
+       <string>Valider</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="editTitre"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="titreLbl">
+      <property name="text">
+       <string>Titre</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

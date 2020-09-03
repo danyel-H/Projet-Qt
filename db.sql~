@@ -1,0 +1,79 @@
+
+begin transaction;
+
+
+create table type
+		(
+		id_type int primary key,
+		libelle varchar(50)
+		);
+
+create table clubs
+	(
+	id_club int primary key,
+	libelle varchar(500) not null
+	);
+
+create table utilisateurs
+	(
+	id_u int primary key,
+	login varchar(50),
+	mdp  varchar(62),
+	nom	 varchar(100),
+	id_type int references type not null
+	);
+
+create table materiels
+		(
+		id_mat int primary key,
+		libelle varchar(200),
+		qte int,
+		id_club int references clubs not null 
+		);
+
+
+
+alter table materiels owner to sp2_admin;
+alter table clubs owner to sp2_admin;
+alter table utilisateurs owner to sp2_admin;
+alter table type owner to sp2_admin;
+
+
+insert into type(id_type, libelle)
+			values(1, 'gestion_clubs');
+
+insert into type(id_type, libelle)
+				values(2, 'gestion_materiel');
+
+insert into utilisateurs(id_u,login, mdp, nom, id_type)
+				values(1,'danyel', md5('azertyuiop'), 'Danyel', 1);
+
+insert into utilisateurs(id_u,login, mdp, nom, id_type)
+				values(2,'toto', md5('azertyuiop'), 'Toto', 2);
+
+insert into clubs(id_club, libelle)
+				values(1, 'Baseball');
+insert into clubs(id_club, libelle)
+				values(2, 'Pétanque');
+insert into clubs(id_club, libelle)
+				values(3, 'Athlétisme');
+insert into clubs(id_club, libelle)
+				values(4, 'Tennis');
+insert into clubs(id_club, libelle)
+				values(5, 'Natation');
+
+
+insert into materiels(id_mat, libelle, qte, id_club)
+				values(1, 'Batte de Baseball', 5, 1);
+insert into materiels(id_mat, libelle, qte, id_club)
+				values(2, 'Boules de pétanques', 50, 2);
+insert into materiels(id_mat, libelle, qte, id_club)
+				values(3, 'Haies', 5, 3);
+insert into materiels(id_mat, libelle, qte, id_club)
+				values(4, 'Raquettes', 15, 4);
+insert into materiels(id_mat, libelle, qte, id_club)
+				values(5, 'Balles de Tennis', 50, 4);
+insert into materiels(id_mat, libelle, qte, id_club)
+				values(6, 'Bonnet de bain', 15, 5);
+
+commit;
